@@ -12,17 +12,29 @@ int main() {
     char linhas[10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
     
     // Posicionamento dos navios (coordenadas iniciais)
-    int linhaH = 2, colunaH = 3; // Navio horizontal
-    int linhaV = 5, colunaV = 6; // Navio vertical
+    int linhaH = 2, colunaH = 3;  // Navio horizontal
+    int linhaV = 5, colunaV = 6;  // Navio vertical
     
-    // Colocando o navio horizontal no tabuleiro
+    // Posicionando o navio horizontal
     for (int i = 0; i < NAVIO; i++) {
         tabuleiro[linhaH][colunaH + i] = 3; // Preenche as 3 posições do navio horizontal
     }
     
-    // Colocando o navio vertical no tabuleiro
+    // Posicionando o navio vertical
     for (int i = 0; i < NAVIO; i++) {
         tabuleiro[linhaV + i][colunaV] = 3; // Preenche as 3 posições do navio vertical
+    }
+
+    // Posicionando o navio diagonal 1 (aumento nas linhas e colunas)
+    int linhaD1 = 5, colunaD1 = 0;  // Posição inicial para o primeiro navio diagonal
+    for (int i = 0; i < NAVIO; i++) {
+        tabuleiro[linhaD1 + i][colunaD1 + i] = 3; // Preenche as 3 posições do navio diagonal 1
+    }
+
+    // Posicionando o navio diagonal 2 (aumento na linha e diminuição na coluna)
+    int linhaD2 = 0, colunaD2 = 9;  // Posição inicial para o segundo navio diagonal
+    for (int i = 0; i < NAVIO; i++) {
+        tabuleiro[linhaD2 + i][colunaD2 - i] = 3; // Preenche as 3 posições do navio diagonal 2
     }
     
     // Exibição do tabuleiro
