@@ -30,6 +30,8 @@ int main() {
     
     // Exibição do tabuleiro
     // Imprimindo as colunas
+    printf("°°° TABULEIRO BATALHA NAVAL °°°");
+    printf("\n");
     printf("   ");
     for (int j = 0; j < TAMANHO; j++) {
         printf("%d ", j);  // Exibe o número de cada coluna (0 a 9)
